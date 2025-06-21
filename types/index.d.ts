@@ -10,7 +10,7 @@ declare type FormTypes = {
 
 declare type ButtonProps = {
   text: string;
-  classname: string;
+  classname?: string;
   arrow: boolean;
   type?: "submit" | "normal";
   isLoading?: boolean;

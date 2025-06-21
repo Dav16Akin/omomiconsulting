@@ -5,13 +5,11 @@ import Topbar from "@/components/shared/Topbar";
 import Footer from "@/components/shared/Footer";
 
 
-
 const carlito = Carlito({
   variable: "--font-carlito",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-
 
 export const metadata: Metadata =  {
     title: "Home / Omomi Consulting",

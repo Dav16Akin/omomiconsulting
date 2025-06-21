@@ -1,7 +1,5 @@
 import {
-  Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -12,7 +10,15 @@ import { FormTypes } from "@/types";
 import { FormFieldType } from "./forms/ContactForm";
 import { Textarea } from "./ui/textarea";
 
-const RenderField = ({ field, props }: { field: any; props: FormTypes }) => {
+import { ControllerRenderProps, FieldValues } from "react-hook-form";
+
+const RenderField = ({
+  field,
+  props,
+}: {
+  field: ControllerRenderProps<FieldValues, string>;
+  props: FormTypes;
+}) => {
   const { placeholder, fieldType } = props;
   switch (fieldType) {
     case FormFieldType.INPUT:

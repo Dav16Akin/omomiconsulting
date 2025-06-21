@@ -29,16 +29,20 @@ const ContactForm = () => {
   function onSubmit(values: z.infer<typeof ContactFormValidation>) {
     setIsLoading(true);
     try {
-      form.reset()
+      form.reset();
+      return values;
     } catch (error) {
       console.log(error);
     }
 
-    setIsLoading(false)
+    setIsLoading(false);
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 lg:p-16 p-8 w-full">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-8 lg:p-16 p-8 w-full"
+      >
         <div className="text-center lg:text-left">
           <span className="sub-header lg:text-2xl">CONTACT US</span>
           <h1 className="text-5xl">Our Team Will Respond</h1>

@@ -1,103 +1,153 @@
+import CustomButton from "@/components/shared/CustomButton";
+import StrategySection from "@/components/StrategySection";
+import { ServicesData, StrategyData } from "@/constants";
 import Image from "next/image";
+
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Home / Omomi Consulting",
+    description:
+      "Welcome to Omomi Consulting — empowering inclusive growth for institutions and businesses across Africa through strategic insights and innovative solutions.",
+  };
+}
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <>
+      <section className="h-[580px] lg:h-screen p-6 md:p-28 relative max-h-screen flex items-center w-full">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/assets/images/bg-home-hero.png"
+          alt="hero background image"
+          fill
+          className="object-cover object-right z-10"
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent opacity-100 z-20" />
+
+        {/* TEXT */}
+        <div className="space-y-6 z-30 lg:w-3/5 md:w-4/5 lg:mb-16">
+          <p className="sub-header lg:text-2xl ">WELCOME TO OMOMI CONSULT</p>
+          <h1 className="text-3xl lg:text-6xl">
+            We Pull the Strings of Strategy, So You Can Hit the High Notes of
+            Growth
+          </h1>
+          <h2 className="text-black lg:text-2xl">
+            Our expert guidance in business development and finance empowers
+            organizations to scale sustainably and confidently.
+          </h2>
+
+          <CustomButton
+            text={"Start Building with us"}
+            arrow={true}
+            classname={"w-[300px] h-[62px]"}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      <section className="p-6 mt-6 space-y-8 lg:flex lg:flex-row-reverse lg:justify-center lg:gap-8 lg:items-center lg:p-16">
+        <div className="flex flex-col gap-4 lg:w-3/5 lg:p-8">
+          <p className="sub-header lg:text-2xl">WHAT ABOUT US</p>
+          <h1 className="text-2xl lg:text-5xl">
+            Empowering Growth Through Strategy and Purpose.
+          </h1>
+          <p className="text-text  lg:text-2xl">
+            We help deliver products and projects through a disciplined
+            execution rhythm to improve safety outcomes, maintain quality, and
+            reduce costs. This end-to-end value assurance and optimization
+            support, tailored to all our major projects and is further enhanced
+            by full-time support from Omomi experts.
+          </p>
+        </div>
+
+        <div className="border-8 relative overflow-hidden border-backdrop rounded-3xl bg-backdrop">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/assets/icons/ellipse.png"
+            alt="image"
+            width={24}
+            height={24}
+            className="object-cover top-1 w-fit h-6 absolute"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/assets/icons/ellipse.png"
+            alt="image"
+            width={24}
+            height={24}
+            className="object-cover w-fit bottom-1 right-0 h-6 absolute"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/assets/images/bg-about-us.png"
+            alt="about us image"
+            width={1000}
+            height={1000}
+            className="object-cover object-[25%_75%]  min-h-[436px] w-full rounded-3xl"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+
+      <section className="text-center bg-gray relative min-h-screen px-6 overflow-hidden pb-10">
+        <div className="flex relative flex-col gap-4 py-8 z-20">
+          <p className="sub-header font-normal lg:text-2xl">OUR SERVICES</p>
+          <h1 className="text-2xl lg:text-5xl">
+            Tailored Solutions For Your Business
+          </h1>
+        </div>
+
+        <div className="relative text-left flex flex-col  gap-8 md:p-8 lg:p-16">
+          {ServicesData.map((data, index) => {
+            return (
+              <div
+                key={index}
+                className="p-4 border-t lg:flex items-center lg:justify-between lg:gap-3 border-gray-400"
+              >
+                <Image
+                  src={data.image}
+                  alt={data.header + 1}
+                  width={30}
+                  height={30}
+                  className="lg:w-16 lg:h-16"
+                />
+                <h1 className="text-2xl ">{data.header}</h1>
+                <p className="text-text lg:text-2xl lg:w-3/6">{data.text}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="p-6 lg:flex lg:p-24 lg:gap-8">
+        <div className="flex gap-4 flex-col lg:w-4/6 ">
+          <h1 className="text-2xl lg:text-5xl">Where Strategy Meets Execution</h1>
+          <p className="text-text lg:text-2xl">
+            We blend insight and innovation to unlock sustainable growth. Our
+            focus? Long-term profitability for all stakeholders—across every
+            strategic touchpoint
+          </p>
+
+          <div className="hidden lg:block overflow-hidden border-backdrop rounded-3xl bg-backdrop">
+            <Image
+              src="/assets/images/strategic.png"
+              alt="strategic image"
+              width={1000}
+              height={1000}
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6 mt-6 lg:grid lg:grid-cols-2">
+          {StrategyData.map((data) => (
+            <StrategySection
+              key={data.header + 1}
+              header={data.header}
+              content={data.content}
+              image={data.image}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

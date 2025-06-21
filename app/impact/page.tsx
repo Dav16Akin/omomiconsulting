@@ -78,6 +78,7 @@ export default function impact() {
                   {data.text}
                 </h1>
               </div>
+            
             );
           })}
         </div>

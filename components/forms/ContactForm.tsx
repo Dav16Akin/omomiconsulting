@@ -38,10 +38,10 @@ const ContactForm = () => {
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-8 w-full">
-        <div className="text-center">
-          <span className="sub-header">CONTACT US</span>
-          <h1>Our Team Will Respond</h1>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 lg:p-16 p-8 w-full">
+        <div className="text-center lg:text-left">
+          <span className="sub-header lg:text-2xl">CONTACT US</span>
+          <h1 className="text-5xl">Our Team Will Respond</h1>
         </div>
 
         <CustomFormField
@@ -76,13 +76,12 @@ const ContactForm = () => {
           placeholder="Type your message here."
         />
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center lg:items-start">
           <CustomButton
             isLoading={isLoading}
             type="submit"
             text={"Submit"}
             arrow={false}
-            classname="w-full"
           />
         </div>
       </form>

@@ -23,6 +23,8 @@ export default function Home() {
           fill
           className="object-cover object-right z-10"
           priority
+          placeholder="blur"
+          blurDataURL="/assets/images/bg-home-hero.png"
         />
 
         {/* GRADIENT */}
@@ -84,6 +86,8 @@ export default function Home() {
             width={1000}
             height={1000}
             className="object-cover object-[25%_75%]  min-h-[436px] w-full rounded-3xl"
+            placeholder="blur"
+            blurDataURL="/assets/images/bg-about-us.png"
           />
         </div>
       </section>
@@ -118,11 +122,8 @@ export default function Home() {
                     className="lg:w-16 lg:h-16 invert-0 brightness-0 group-hover:invert"
                   />
                   <h1 className="text-2xl ">{data.header}</h1>
-                  <p className="lg:text-2xl lg:w-3/6">
-                    {data.text}
-                  </p>
+                  <p className="lg:text-2xl lg:w-3/6">{data.text}</p>
                 </div>
-
               </div>
             );
           })}
@@ -146,6 +147,8 @@ export default function Home() {
               alt="strategic image"
               width={1000}
               height={1000}
+              placeholder="blur"
+              blurDataURL="/assets/images/strategic.png"
             />
           </div>
         </div>

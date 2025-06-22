@@ -44,6 +44,9 @@ export default function impact() {
             alt="impact image"
             fill
             className="object-cover"
+            placeholder="blur"
+            blurDataURL="/assets/images/impact.png"
+            priority
           />
         </div>
       </section>
@@ -75,6 +78,9 @@ export default function impact() {
                   alt={data.text + "image"}
                   fill
                   className="object-cover"
+                  placeholder="blur"
+                  blurDataURL={"data.image"}
+                  loading="lazy"
                 />
                 <h1 className="absolute z-20 bottom-6 left-6 text-white text-2xl">
                   {data.text}

@@ -35,6 +35,7 @@ const Footer = () => {
             width={500}
             height={400}
             className="overflow-hidden rounded-t-3xl lg:rounded-3xl w-full"
+            priority
           />
 
           <div className="lg:w-3/4">

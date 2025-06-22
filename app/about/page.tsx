@@ -42,6 +42,9 @@ export default function about() {
             alt="about image"
             fill
             className="object-cover"
+            placeholder="blur"
+            blurDataURL="/assets/images/about.png"
+            priority
           />
         </div>
       </section>
@@ -54,6 +57,9 @@ export default function about() {
             width={1000}
             height={1000}
             className="object-cover hidden lg:flex"
+            placeholder="blur"
+            blurDataURL="/assets/images/lion.png"
+            loading="lazy"
           />
           <div className="space-y-4">
             <p className="sub-header ">OUR HISTORY</p>
@@ -73,6 +79,9 @@ export default function about() {
                     alt={data}
                     width={20}
                     height={16}
+                    placeholder="blur"
+                    blurDataURL="/assets/icons/strategy.svg"
+                    loading="lazy"
                   />{" "}
                   <p className="font-bold">{data}</p>
                 </div>
@@ -95,6 +104,9 @@ export default function about() {
                   alt={data.text + "image"}
                   fill
                   className="object-cover"
+                  placeholder="blur"
+                  blurDataURL={"data.image"}
+                  loading="lazy"
                 />
                 <h1 className="absolute bottom-6 left-6 z-20 text-white text-2xl">
                   {data.text}

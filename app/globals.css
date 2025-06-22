@@ -21,15 +21,23 @@
 
 body {
   font-family: var(--font-carlito);
+  transition-property: opacity, background, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  transition: all 500ms ease-in-out;
+  opacity: 0;
+  background: white;
+  transform: translateY(40px);
+  filter: blur(5px)
 }
 
 h1 {
   @apply font-bold
 }
 
-p {
-  @apply text-text
-}
 
 
 .sub-header {

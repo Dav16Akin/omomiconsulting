@@ -96,22 +96,33 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className="relative text-left flex flex-col  gap-8 md:p-8 lg:p-16">
+        <div className="relative text-left flex  flex-col md:p-8 lg:p-16">
           {ServicesData.map((data, index) => {
             return (
               <div
                 key={index}
-                className="p-4 border-t lg:flex items-center lg:justify-between lg:gap-3 border-gray-400"
+                className="group relative z-20 bg-gray border-t border-gray-400 overflow-hidden"
               >
                 <Image
-                  src={data.image}
-                  alt={data.header + 1}
-                  width={30}
-                  height={30}
-                  className="lg:w-16 lg:h-16"
+                  src="/assets/images/hover.jpg"
+                  alt="image"
+                  fill
+                  className="object-cover w-full opacity-0  group-hover:opacity-50 absolute transition-opacity duration-700"
                 />
-                <h1 className="text-2xl ">{data.header}</h1>
-                <p className="text-text lg:text-2xl lg:w-3/6">{data.text}</p>
+                <div className="relative space-y-4 z-10 p-4 lg:flex items-center justify-between gap-3 transition-all duration-700 group-hover:text-white group-hover:bg-redish/80 group-hover:rounded-2xl group-hover:overflow-hidden">
+                  <Image
+                    src={data.image}
+                    alt={data.header + 1}
+                    width={30}
+                    height={30}
+                    className="lg:w-16 lg:h-16 invert-0 brightness-0 group-hover:invert"
+                  />
+                  <h1 className="text-2xl ">{data.header}</h1>
+                  <p className="lg:text-2xl lg:w-3/6">
+                    {data.text}
+                  </p>
+                </div>
+
               </div>
             );
           })}
@@ -120,14 +131,16 @@ export default function Home() {
 
       <section className="p-6 lg:flex lg:p-24 lg:gap-8">
         <div className="flex gap-4 flex-col lg:w-4/6 ">
-          <h1 className="text-2xl lg:text-5xl">Where Strategy Meets Execution</h1>
+          <h1 className="text-2xl lg:text-5xl">
+            Where Strategy Meets Execution
+          </h1>
           <p className="text-text lg:text-2xl">
             We blend insight and innovation to unlock sustainable growth. Our
             focus? Long-term profitability for all stakeholders—across every
             strategic touchpoint
           </p>
 
-          <div className="hidden lg:block overflow-hidden border-backdrop rounded-3xl bg-backdrop">
+          <div className="hidden lg:block overflow-hidden border-backdrop rounded-3xl">
             <Image
               src="/assets/images/strategic.png"
               alt="strategic image"

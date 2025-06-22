@@ -14,12 +14,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function about() {
   return (
-    <div className="space-y-24">
+    <div className="space-y-12">
       <section className="space-y-6 lg:flex lg:gap-12 p-8 lg:justify-center lg:items-center lg:h-[80vh] lg:bg-gray">
         <div className="space-y-6 lg:w-2/6">
           <p className="sub-header lg:text-2xl">ABOUT US</p>
-          <h1 className="text-3xl lg:text-5xl">Rooted in Insight. Driven by Impact.</h1>
-          <p className="lg:text-2xl">
+          <h1 className="text-3xl lg:text-5xl">
+            Rooted in Insight. Driven by Impact.
+          </h1>
+          <p className="lg:text-2xl text-text">
             At Omomi Consulting, we are more than just advisors — we are
             strategic partners committed to unlocking the full potential of your
             business. Born from a vision to support sustainable and inclusive
@@ -34,23 +36,13 @@ export default function about() {
           />
         </div>
 
-        <div className="border-4 lg:w-3/6 border-backdrop lg:border-0 rounded-3xl overflow-hidden h-[400px] relative">
+        <div className="md:w-[600px] md:h-[600px] rounded-3xl overflow-hidden h-[376px] relative">
           <Image
             src="/assets/images/about.png"
-            alt="imact image"
+            alt="about image"
             fill
-            className="absolute object-cover z-0"
+            className="object-cover"
           />
-          <div className="grid grid-cols-5 grid-rows-3 w-full h-full inset-0 absolute z-20">
-            <div className="bg-transparent border-white border-8 row-span-3 col-span-1"></div>
-            <div className="bg-transparent border-white border-8  row-span-2 col-span-1"></div>
-            <div className="bg-transparent border-white border-8  row-span-1 col-span-1"></div>
-            <div className="bg-transparent border-white border-8  row-span-2 col-span-1"></div>
-            <div className="bg-transparent border-white border-8  row-span-3 col-span-1"></div>
-            <div className="bg-transparent border-white border-8  row-span-2 col-span-1"></div>
-            <div className="bg-transparent border-white border-8  row-span-1 col-span-1"></div>
-            <div className="bg-transparent border-white border-8  row-span-1 col-span-1"></div>
-          </div>
         </div>
       </section>
 
@@ -65,8 +57,8 @@ export default function about() {
           />
           <div className="space-y-4">
             <p className="sub-header ">OUR HISTORY</p>
-            <h1 className="text-2xl">Proudly African-rooted</h1>
-            <p>
+            <h1 className="text-2xl lg:text-5xl">Proudly African-rooted</h1>
+            <p className="text-text lg:text-2xl">
               Founded in 2004 Omomi Consulting Ltd facilitates creativity,
               innovation and strategy for the growth and sustainability of
               businesses in Nigeria. We focus on providing strategy, solutions

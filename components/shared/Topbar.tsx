@@ -6,10 +6,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import CustomButton from "./CustomButton";
 import { usePathname } from "next/navigation";
+import { TransitionLink } from "./TransitionLink";
 
 const Topbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname()
+
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -17,7 +19,7 @@ const Topbar = () => {
   return (
     <>
       <div className="w-full mb-2 py-2 px-6 flex flex-row justify-between items-center border-b lg:border-0 topbar-border lg:h-20 h-[51px]">
-        <Link href="/">
+        <Link href="/" >
           <Image
             src="/assets/icons/logo.png"
             alt="logo"
@@ -29,9 +31,9 @@ const Topbar = () => {
 
         <div className="hidden lg:flex lg:gap-8">
           {topbarLinks.map((option, index) => (
-            <Link key={index} href={option.link} className={`${pathname === option.link && "underline decoration-redish underline-offset-8 transition-colors delay-75"} font-bold`}>
+            <TransitionLink key={index} href={option.link} className={`${pathname === option.link && "underline decoration-redish underline-offset-8 transition-colors delay-75"} font-bold`}>
               {option.name}
-            </Link>
+            </TransitionLink>
           ))}
         </div>
 

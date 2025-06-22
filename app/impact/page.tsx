@@ -21,7 +21,7 @@ export default function impact() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl">
             Maximizing Project Impact Through Strategic Capital Alignment
           </h1>
-          <p className="lg:text-2xl">
+          <p className="lg:text-2xl text-text">
             Omomi helps businesses deploy best-in-class thinking for maximum
             impact across their project’s portfolios and project delivery value
             chain. Our network of experts challenges traditional approaches to
@@ -41,7 +41,7 @@ export default function impact() {
         <div className="border-4 md:w-[600px] md:h-[600px] border-backdrop rounded-3xl overflow-hidden h-[376px] relative">
           <Image
             src="/assets/images/impact.png"
-            alt="imact image"
+            alt="impact image"
             fill
             className="object-cover"
           />
@@ -50,7 +50,9 @@ export default function impact() {
 
       <div className="space-y-8 p-8">
         <div className="space-y-8">
-          <h1 className="text-2xl lg:text-center lg:text-5xl">Product Development and Delivery</h1>
+          <h1 className="text-2xl lg:text-center lg:text-5xl">
+            Product Development and Delivery
+          </h1>
           <p className="lg:text-2xl lg:text-center">
             We help deliver products and projects through a disciplined
             execution rhythm to improve safety outcomes, maintain quality, and
@@ -78,7 +80,6 @@ export default function impact() {
                   {data.text}
                 </h1>
               </div>
-            
             );
           })}
         </div>

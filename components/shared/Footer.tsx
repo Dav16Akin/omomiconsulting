@@ -42,7 +42,7 @@ const Footer = () => {
               <h1 className="text-2xl lg:text-5xl text-left">
                 Championing Inclusive Growth
               </h1>
-              <p className="≈text-left lg:text-2xl">
+              <p className="≈text-left text-text lg:text-2xl">
                 We’ve always been big champions of the growth potential of our
                 clients. Today, we’re privileged to work with companies and
                 institutions that are on a new growth journey, one that pursues

@@ -79,7 +79,7 @@ export default function impact() {
                   fill
                   className="object-cover"
                   placeholder="blur"
-                  blurDataURL={"data.image"}
+                   blurDataURL={`${data.image}`}
                   loading="lazy"
                 />
                 <h1 className="absolute z-20 bottom-6 left-6 text-white text-2xl">

@@ -105,7 +105,7 @@ export default function about() {
                   fill
                   className="object-cover"
                   placeholder="blur"
-                  blurDataURL={"data.image"}
+                  blurDataURL={`${data.image}`}
                   loading="lazy"
                 />
                 <h1 className="absolute bottom-6 left-6 z-20 text-white text-2xl">

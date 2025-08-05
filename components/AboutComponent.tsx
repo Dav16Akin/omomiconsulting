@@ -1,3 +1,5 @@
+"use client"
+
 import { AboutData, AboutImages } from "@/constants";
 import Image from "next/image";
 import React from "react";

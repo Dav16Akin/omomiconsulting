@@ -11,7 +11,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function about() {
-  return (
-<AboutComponent/>
-  );
+  return <AboutComponent />;
 }

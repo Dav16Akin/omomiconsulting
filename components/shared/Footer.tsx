@@ -5,13 +5,13 @@ import Link from "next/link";
 import CustomButton from "./CustomButton";
 import { topbarLinks } from "@/constants";
 import {
-  Facebook,
+  // Facebook,
   Globe,
-  Instagram,
-  Linkedin,
+  // Instagram,
+  // Linkedin,
   Mail,
   MapPin,
-  Twitter,
+  // Twitter,
 } from "lucide-react";
 
 const Footer = () => {

@@ -17,7 +17,6 @@ export enum FormFieldType {
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const form = useForm<z.infer<typeof ContactFormValidation>>({
     resolver: zodResolver(ContactFormValidation),
@@ -31,7 +30,6 @@ const ContactForm = () => {
 
   async function onSubmit(values: z.infer<typeof ContactFormValidation>) {
     setIsLoading(true);
-    setError(null);
     try {
       const response = await fetch("/api/send-confirmation", {
         method: "POST",
@@ -55,12 +53,7 @@ const ContactForm = () => {
       form.reset();
       router.push("/contact/success");
     } catch (error) {
-      // console.log(error);
-      setError(
-        error instanceof Error
-          ? error.message
-          : "An error occurred while sending your message"
-      );
+      console.log(error);
     } finally {
       setIsLoading(false);
     }

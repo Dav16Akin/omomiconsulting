@@ -1,6 +1,6 @@
 import ContactForm from "@/components/forms/ContactForm";
+import GoogleMapComponent from "@/components/GoogleMapComponent";
 import { Metadata } from "next";
-import Image from "next/image";
 import React from "react";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -12,18 +12,12 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function page() {
+  const defaultCenter = { lat: 6.449, lng: 3.407 };
   return (
     <div className="w-full lg:flex lg:gap-8 lg:p-8 lg:items-center lg:justify-between">
       <ContactForm />
       <div className="relative hidden lg:h-[500px] lg:flex lg:w-4/6 lg:justify-center lg:items-center">
-        <Image
-          src="/assets/images/map.png"
-          alt="map image"
-          fill
-          placeholder="blur"
-          blurDataURL="/assets/images/map.png"
-          priority
-        />
+        <GoogleMapComponent center={defaultCenter} />
       </div>
     </div>
   );

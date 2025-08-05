@@ -50,6 +50,10 @@ h1 {
   }
   body {
     @apply bg-white text-foreground;
+
+  }
+  .success-img {
+    @apply m-auto flex flex-1 flex-col items-center justify-between gap-10 py-10
   }
 }
 

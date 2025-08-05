@@ -23,7 +23,7 @@ const RenderField = ({
   switch (fieldType) {
     case FormFieldType.INPUT:
       return (
-        <FormControl className="h-full">
+        <FormControl className="h-full lg:text-xl">
           <Input
             placeholder={placeholder}
             {...field}
@@ -33,7 +33,7 @@ const RenderField = ({
       );
     case FormFieldType.TEXTAREA:
       return (
-        <FormControl>
+        <FormControl className="h-full lg:text-xl">
           <Textarea
             placeholder={placeholder}
             className=" p-4 rounded-xl"

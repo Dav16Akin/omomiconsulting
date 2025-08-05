@@ -2,6 +2,9 @@ import CustomButton from "@/components/shared/CustomButton";
 import StrategySection from "@/components/StrategySection";
 import { ServicesData, StrategyData } from "@/constants";
 import Image from "next/image";
+import { gsap } from "gsap";
+
+
 
 import type { Metadata } from "next";
 

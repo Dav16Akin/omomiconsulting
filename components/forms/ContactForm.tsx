@@ -8,6 +8,8 @@ import { Form } from "../ui/form";
 import { useForm } from "react-hook-form";
 import CustomButton from "../shared/CustomButton";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 export enum FormFieldType {
   INPUT = "input",
@@ -16,6 +18,7 @@ export enum FormFieldType {
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
   const form = useForm<z.infer<typeof ContactFormValidation>>({
     resolver: zodResolver(ContactFormValidation),
     defaultValues: {
@@ -26,16 +29,16 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof ContactFormValidation>) {
+  async function onSubmit(values: z.infer<typeof ContactFormValidation>) {
     setIsLoading(true);
     try {
       form.reset();
-      return values;
+      router.push("/contact/success");
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
-
-    setIsLoading(false);
   }
   return (
     <Form {...form}>
@@ -45,7 +48,7 @@ const ContactForm = () => {
       >
         <div className="text-center lg:text-left">
           <span className="sub-header lg:text-2xl">CONTACT US</span>
-          <h1 className="text-5xl">Our Team Will Respond</h1>
+          <h1 className="lg:text-5xl text-3xl">Our Team Will Respond</h1>
         </div>
 
         <CustomFormField

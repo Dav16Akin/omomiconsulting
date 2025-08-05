@@ -115,14 +115,14 @@ const Footer = () => {
             </h2>
             <div className="flex flex-col gap-6">
               <div className="flex gap-2">
-                <Mail /> <span>info@omomiconsulting.com</span>
+                <Mail className="w-8"/> <span>info@omomiconsulting.com</span>
               </div>
               <div className="flex gap-2">
-                <Globe />
+                <Globe className="w-8"/>
                 <span>www.omomiconsulting.com</span>
               </div>
               <div className="flex gap-2">
-                <MapPin />
+                <MapPin className="w-12"/>
                 <span>
                   35 Moloney Street, Obalende, Lagos Island, Lagos State,
                   Nigeria

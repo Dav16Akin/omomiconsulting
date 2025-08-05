@@ -46,7 +46,7 @@ const Topbar = () => {
           ))}
         </div>
 
-        <Link href="mailto:info@omomiconsulting.com">
+        <Link href="mailto:Info@omomiconsulting.com?subject=Inquiry&body=Hello%20Omomi%20Consulting,">
           <CustomButton
             text={"Book a consultation"}
             arrow={false}

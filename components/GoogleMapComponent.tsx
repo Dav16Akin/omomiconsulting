@@ -2,10 +2,14 @@
 import React, { useMemo } from "react";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 
-const GoogleMapComponent = ({ center }: any) => {
+interface GoogleMapComponentProps {
+  center: { lat: number; lng: number };
+}
+
+const GoogleMapComponent: React.FC<GoogleMapComponentProps> = ({ center }) => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
-    libraries: ["places"], // Example: include the places library
+    libraries: ["places"],
   });
 
   const mapStyles = useMemo(

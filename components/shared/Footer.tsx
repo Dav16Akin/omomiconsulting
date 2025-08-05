@@ -76,7 +76,7 @@ const Footer = () => {
             We help deliver products and projects through a disciplined
             execution rhythm to improve safety outcomes
           </p>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <Link href="#">
               <Instagram />
             </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
             <Link href="#">
               <Linkedin />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex gap-8 font-semibold lg:p-16">

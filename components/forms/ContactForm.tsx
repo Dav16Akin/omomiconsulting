@@ -10,7 +10,6 @@ import CustomButton from "../shared/CustomButton";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-
 export enum FormFieldType {
   INPUT = "input",
   TEXTAREA = "textarea",
@@ -18,6 +17,7 @@ export enum FormFieldType {
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const form = useForm<z.infer<typeof ContactFormValidation>>({
     resolver: zodResolver(ContactFormValidation),
@@ -31,11 +31,36 @@ const ContactForm = () => {
 
   async function onSubmit(values: z.infer<typeof ContactFormValidation>) {
     setIsLoading(true);
+    setError(null);
     try {
+      const response = await fetch("/api/send-confirmation", {
+        method: "POST",
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Failed to send email");
+      }
+
+      // console.log("Emails sent successfully:", result);
+
       form.reset();
       router.push("/contact/success");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      setError(
+        error instanceof Error
+          ? error.message
+          : "An error occurred while sending your message"
+      );
     } finally {
       setIsLoading(false);
     }

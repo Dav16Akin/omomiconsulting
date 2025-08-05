@@ -3,7 +3,11 @@ import { Carlito } from "next/font/google";
 import "./globals.css";
 import Topbar from "@/components/shared/Topbar";
 import Footer from "@/components/shared/Footer";
+import { gsap } from "gsap";
+import { ScrollTrigger, SplitText } from "gsap/all";
 
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const carlito = Carlito({
   variable: "--font-carlito",

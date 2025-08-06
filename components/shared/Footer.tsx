@@ -54,11 +54,13 @@ const Footer = () => {
             </div>
 
             <div className="m-4">
-              <CustomButton
-                text={" Get started now"}
-                arrow={false}
-                classname={"w-[300px] h-[52px]"}
-              />
+              <Link href="/contact">
+                <CustomButton
+                  text={"Start Building with us"}
+                  arrow={true}
+                  classname={"w-[300px] h-[52px]"}
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -115,14 +117,14 @@ const Footer = () => {
             </h2>
             <div className="flex flex-col gap-6">
               <div className="flex gap-2">
-                <Mail className="w-8"/> <span>info@omomiconsulting.com</span>
+                <Mail className="w-8" /> <span>info@omomiconsulting.com</span>
               </div>
               <div className="flex gap-2">
-                <Globe className="w-8"/>
+                <Globe className="w-8" />
                 <span>www.omomiconsulting.com</span>
               </div>
               <div className="flex gap-2">
-                <MapPin className="w-12"/>
+                <MapPin className="w-12" />
                 <span>
                   35 Moloney Street, Obalende, Lagos Island, Lagos State,
                   Nigeria

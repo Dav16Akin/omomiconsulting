@@ -7,6 +7,7 @@ import CustomButton from "./shared/CustomButton";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import Link from "next/link";
 
 const AboutComponent = () => {
   useGSAP(() => {
@@ -51,11 +52,13 @@ const AboutComponent = () => {
             implement transformative solutions, and build resilience in an
             ever-changing world.
           </p>
-          <CustomButton
-            text={"Start Building with us"}
-            arrow={true}
-            classname={"w-[300px] h-[52px]"}
-          />
+        <Link href="/contact">
+            <CustomButton
+              text={"Start Building with us"}
+              arrow={true}
+              classname={"w-[300px] h-[52px]"}
+            />
+          </Link>
         </div>
 
         <div className="md:w-[600px] md:h-[600px] rounded-3xl overflow-hidden h-[376px] relative">

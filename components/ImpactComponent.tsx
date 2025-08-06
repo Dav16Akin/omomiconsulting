@@ -7,8 +7,9 @@ import CustomButton from "./shared/CustomButton";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import Link from "next/link";
 
-const ContactComponent = () => {
+const ImpactComponent = () => {
   useGSAP(() => {
     const heroSplit = new SplitText(".title", {
       type: "lines",
@@ -53,11 +54,13 @@ const ContactComponent = () => {
             across all asset classes.
           </p>
 
-          <CustomButton
-            text={"Start Building with us"}
-            arrow={true}
-            classname={"w-[300px] h-[62px]"}
-          />
+           <Link href="/contact">
+            <CustomButton
+              text={"Start Building with us"}
+              arrow={true}
+              classname={"w-[300px] h-[62px]"}
+            />
+          </Link>
         </div>
 
         <div className="border-4 md:w-[600px] md:h-[600px] border-backdrop rounded-3xl overflow-hidden h-[376px] relative">
@@ -116,4 +119,4 @@ const ContactComponent = () => {
   );
 };
 
-export default ContactComponent;
+export default ImpactComponent;

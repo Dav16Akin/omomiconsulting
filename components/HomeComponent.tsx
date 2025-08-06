@@ -8,6 +8,7 @@ import StrategySection from "./StrategySection";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import Link from "next/link";
 
 const HomeComponent = () => {
   useGSAP(() => {
@@ -64,11 +65,13 @@ const HomeComponent = () => {
             organizations to scale sustainably and confidently.
           </h2>
 
-          <CustomButton
-            text={"Start Building with us"}
-            arrow={true}
-            classname={"w-[300px] h-[62px]"}
-          />
+          <Link href="/contact">
+            <CustomButton
+              text={"Start Building with us"}
+              arrow={true}
+              classname={"w-[300px] h-[62px]"}
+            />
+          </Link>
         </div>
       </section>
 

@@ -55,7 +55,7 @@ const HomeComponent = () => {
 
         {/* TEXT */}
         <div className="space-y-6 z-30 lg:w-3/5 md:w-4/5 lg:mb-16">
-          <p className="sub-header lg:text-2xl ">WELCOME TO OMOMI CONSULT</p>
+          <p className="sub-header lg:text-2xl ">WELCOME TO OMOMI CONSULTING</p>
           <h1 className="text-3xl lg:text-6xl title">
             We Pull the Strings of Strategy, So You Can Hit the High Notes of
             Growth
